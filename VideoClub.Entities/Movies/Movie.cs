@@ -17,5 +17,6 @@ namespace VideoClub.Entities.Movies
         public int Count { get; set; }
         public float Rate { get; set; } = 0;
         public Genre genre { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

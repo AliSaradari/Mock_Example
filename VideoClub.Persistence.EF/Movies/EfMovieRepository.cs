@@ -48,7 +48,7 @@ namespace VideoClub.Persistence.EF.Movies
             });
             if(filterDto.Title != null)
             {
-                result = result.Where(m => m.Title == filterDto.Title);
+                result = result.Where(m => m.Title.Replace(" ", string.Empty).Contains(filterDto.Title.Replace(" ",string.Empty).ToLower()));
             }
             return result.ToList();
         }
